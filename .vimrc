@@ -87,7 +87,11 @@ highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 
 "indent width setting
 set shiftwidth=4
+
+"window setting
 set number
+set laststatus=2
+set statusline=%F%r%h%=
 
 set shell=c:/cygwin/bin/bash.exe	
 
