@@ -96,3 +96,18 @@ set statusline=%F%r%h%=
 set shell=c:/cygwin/bin/bash.exe	
 
 set encoding=japan
+
+"plugin manager
+set nocompatible
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/vimproc.vim.git'
+
+filetype plugin on
+filetype indent on 
