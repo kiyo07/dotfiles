@@ -108,6 +108,8 @@ endif
 
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/vimproc.vim.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.vim.git'
+NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
 
 filetype plugin on
 filetype indent on 
