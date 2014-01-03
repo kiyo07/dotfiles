@@ -52,3 +52,5 @@ NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
 
 filetype plugin on
 filetype indent on 
+
+colorscheme hybrid
