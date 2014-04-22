@@ -22,7 +22,7 @@ fi
 
 # add PATH
 export SCALA_HOME=/usr/local/share/scala-2.10
-export PATH=$PATH:$SCALA_HOME/bin
+export PATH=/usr/local/bin:$PATH:$SCALA_HOME/bin
 
 # Set PATH so it includes user's private bin if it exists
 # if [ -d "${HOME}/bin" ] ; then
