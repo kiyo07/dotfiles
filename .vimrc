@@ -20,6 +20,10 @@ filetype plugin on
 "set noimcmdline
 "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
+""indent setting
+set autoindent
+set tabstop=4
+
 ""window setting
 set laststatus=2
 set number
