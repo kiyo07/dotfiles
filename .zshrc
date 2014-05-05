@@ -43,4 +43,8 @@ setopt interactive_comments	#regard '#' as comment symbol
 setopt magic_equal_subst	#auto complete for path name after '='
 setopt share_history		#sync history b/w zsh processes
 
-
+# python virtualenv setting
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+fi

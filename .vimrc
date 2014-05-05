@@ -5,6 +5,8 @@ set showmode
 set showcmd
 set showmatch
 set wildmenu
+set incsearch
+set hlsearch
 
 "ctrl+p -> paste the content of clipboard
 set clipboard+=unnamed
@@ -28,6 +30,7 @@ set tabstop=4
 set laststatus=2
 set number
 set statusline=%F%r%h%=
+colorscheme hybrid
 
 ""keyboard setting
 set t_ku=OA
@@ -89,7 +92,4 @@ filetype indent on
 "plugin: calendar setting
 let g:calendar_google_task = 1
 let g:calendar_google_calendar = 1
-
-""color
-colorscheme hybrid
 
