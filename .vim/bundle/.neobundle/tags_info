@@ -1,0 +1,6 @@
+calendar.vim
+neobundle.vim
+neocomplete.vim
+neosnippet.vim
+vimproc.vim
+vimshell.vim
