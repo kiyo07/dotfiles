@@ -1,3 +1,4 @@
+
 ""basic setting
 set noswapfile
 set autoread
@@ -30,6 +31,7 @@ set tabstop=4
 set laststatus=2
 set number
 set statusline=%F%r%h%=
+let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 
 ""keyboard setting
@@ -51,7 +53,7 @@ set nohlsearch
 set cursorline
 let java_highlight_all=1
 let java_highlight_debug=1
-highlight Normal ctermbg=black ctermfg=grey
+"highlight Normal ctermbg=black ctermfg=grey
 highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
 highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 
@@ -84,6 +86,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'lervag/vim-latex'
 NeoBundle 'itchyny/calendar.vim'
 
 filetype plugin on

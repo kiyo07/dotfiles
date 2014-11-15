@@ -12,11 +12,13 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
  
 alias sudo='sudo '
+
+alias wgvim='vim'
  
 # env var
 export CLICOLOR=1
 export SCALA_HOME=/usr/local/share/scala-2.10
-export PATH=/usr/local/bin:$PATH:$SCALA_HOME/bin
+export PATH=/usr/local/bin:$PATH:$SCALA_HOME/bin:/usr/texbin
 export LANG=ja_JP.UTF-8
 
 # color setting
