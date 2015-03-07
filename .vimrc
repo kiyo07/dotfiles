@@ -16,12 +16,9 @@ imap <C-p>  <ESC>"*pa
 
 filetype plugin on
 
-"IME off in escaping from insert mode
-"set imdisable
-"set noimdisable
-"set iminsert=0 imsearch=0
-"set noimcmdline
-"inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+""IME setting (for MacVim)
+let IM_CtrlMode = 4
+inoremap <silent> <C-j> <C-^><C-r>=IMState('FixMode')<CR>
 
 ""indent setting
 set autoindent
@@ -46,7 +43,7 @@ set t_kl=OD
 set t_kr=OC
 noremap <BS> 
 noremap! <BS> 
-imap <C-j> <esc>
+"imap <C-j> <esc>
 set backspace=start,eol,indent
 
 ""mouse setting
@@ -89,10 +86,12 @@ NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 "NeoBundle 'git://github.com/Shougo/neocomplcache.vim.git'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'lervag/vim-latex'
 NeoBundle 'itchyny/calendar.vim'
+NeoBundle 'fuenor/im_control.vim'
 
 filetype plugin on
 filetype indent on 
