@@ -33,6 +33,11 @@ set number
 set statusline=%F%r%h%=
 let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
+"miximizing gui window size
+if has('gui_macvim')
+  set lines=60 columns=200
+  set guioptions-=T
+endif
 
 ""keyboard setting
 set t_ku=OA
