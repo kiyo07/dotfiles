@@ -13,6 +13,7 @@ alias mkdir='mkdir -p'
  
 alias sudo='sudo '
 
+alias gvim='mvim'
 alias wgvim='vim'
  
 # env var
