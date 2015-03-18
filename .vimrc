@@ -9,13 +9,6 @@ set wildmenu
 set incsearch
 set hlsearch
 
-"ctrl+p -> paste the content of clipboard
-set clipboard+=unnamed
-set clipboard=unnamed
-imap <C-p>  <ESC>"*pa
-
-filetype plugin on
-
 ""IME setting (for MacVim)
 let IM_CtrlMode = 4
 inoremap <silent> <C-j> <C-^><C-r>=IMState('FixMode')<CR>
@@ -45,6 +38,14 @@ noremap <BS> 
 noremap! <BS> 
 "imap <C-j> <esc>
 set backspace=start,eol,indent
+
+"""ctrl+p -> paste the content of clipboard
+set clipboard+=unnamed
+set clipboard=unnamed
+imap <C-p>  <ESC>"*pa
+
+"""Y replace $y
+nnoremap Y y$
 
 ""mouse setting
 set mouse=a
@@ -118,6 +119,7 @@ NeoBundle 'rking/ag.vim'
 "plugin: git controll
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
+highlight clear SignColumn
 
 filetype plugin on
 filetype indent on
