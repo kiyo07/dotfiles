@@ -49,6 +49,9 @@ set backspace=start,eol,indent
 ""mouse setting
 set mouse=a
 
+""font setting
+set guifont=Osaka-Mono:h14
+
 ""syntax highlight setting
 syntax on
 set nohlsearch
@@ -73,6 +76,9 @@ set fileformats=unix,dos,mac
 ""auto complete
 set wildmenu wildmode=list:full
 
+"dylib setting
+let $PYTHON_DLL = "usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib"
+
 ""plugin manager
 set nocompatible
 filetype off
@@ -90,13 +96,19 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'lervag/vim-latex'
+
+"plugin: goolgle calendar
 NeoBundle 'itchyny/calendar.vim'
+let g:calendar_google_task = 1
+let g:calendar_google_calendar = 1
+
+"plugin: japanese ime control
 NeoBundle 'fuenor/im_control.vim'
+
+"plugin: evernote on vim
+NeoBundle 'kakkyz81/evervim'
+let g:evervim_devtoken='S=s13:U=15d509:E=1534ba7e19b:C=14bf3f6b270:P=1cd:A=en-devtoken:V=2:H=5f09f1c264a6878144902d9ea0d0f7b9'
 
 filetype plugin on
 filetype indent on 
-
-"plugin: calendar setting
-let g:calendar_google_task = 1
-let g:calendar_google_calendar = 1
 
