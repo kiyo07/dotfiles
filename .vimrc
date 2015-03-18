@@ -5,6 +5,7 @@ set autoread
 set showmode
 set showcmd
 set showmatch
+set matchtime=1
 set wildmenu
 set incsearch
 set hlsearch
@@ -28,6 +29,8 @@ if has('gui_macvim')
   set lines=60 columns=200
   set guioptions-=T
 endif
+set display=lastline
+set pumheight=10
 
 ""keyboard setting
 set t_ku=OA
@@ -46,6 +49,10 @@ imap <C-p>  <ESC>"*pa
 
 """Y replace $y
 nnoremap Y y$
+
+"""increment & decrement mapping
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 ""mouse setting
 set mouse=a
@@ -120,6 +127,11 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 highlight clear SignColumn
+
+"plugin: python settings
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'kevinw/pyflakes-vim'
+NeoBundle 'Yggdroot/indentLine'
 
 filetype plugin on
 filetype indent on
