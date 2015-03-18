@@ -65,7 +65,7 @@ highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 ""indent width setting
 set shiftwidth=4
 
-"set shell=c:/cygwin/bin/bash.exe	
+"set shell=c:/cygwin/bin/bash.exe
 
 ""encoding setting
 set encoding=japan
@@ -109,6 +109,16 @@ NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'kakkyz81/evervim'
 let g:evervim_devtoken='S=s13:U=15d509:E=1534ba7e19b:C=14bf3f6b270:P=1cd:A=en-devtoken:V=2:H=5f09f1c264a6878144902d9ea0d0f7b9'
 
+"plugin: white space management
+NeoBundle 'bronson/vim-trailing-whitespace'
+
+"plugin: code searching ag (the_silver_searcher)
+NeoBundle 'rking/ag.vim'
+
+"plugin: git controll
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+
 filetype plugin on
-filetype indent on 
+filetype indent on
 
