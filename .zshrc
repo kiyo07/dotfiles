@@ -4,18 +4,18 @@
 alias la='ls -a'
 alias ll='ls -l'
 alias ls='ls -G -F'
- 
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
- 
+
 alias mkdir='mkdir -p'
- 
+
 alias sudo='sudo '
 
 alias gvim='mvim'
 alias wgvim='vim'
- 
+
 # env var
 export CLICOLOR=1
 export SCALA_HOME=/usr/local/share/scala-2.10
@@ -50,4 +50,15 @@ setopt share_history		#sync history b/w zsh processes
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
     source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="/usr/local/sbin:$PATH"
+
+# go lang
+if [ -x "`which go`" ]; then
+    export GOPATH=$HOME/.go
+    export PATH=$PATH:$GOPATH/bin
 fi

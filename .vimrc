@@ -1,6 +1,8 @@
 
 ""basic setting
 set noswapfile
+set noundofile
+set nobackup
 set autoread
 set showmode
 set showcmd
@@ -16,6 +18,7 @@ inoremap <silent> <C-j> <C-^><C-r>=IMState('FixMode')<CR>
 
 ""indent setting
 set autoindent
+set expandtab
 set tabstop=4
 
 ""window setting
@@ -44,8 +47,8 @@ set backspace=start,eol,indent
 
 """ctrl+p -> paste the content of clipboard
 set clipboard+=unnamed
-set clipboard=unnamed
-imap <C-p>  <ESC>"*pa
+"set clipboard=unnamed
+"imap <C-p>  <ESC>"*pa
 
 """Y replace $y
 nnoremap Y y$
@@ -88,50 +91,49 @@ set wildmenu wildmode=list:full
 let $PYTHON_DLL = "usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib"
 
 ""plugin manager
-set nocompatible
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
+if &compatible
+  set nocompatible
 endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-"NeoBundle 'git://github.com/Shougo/neocomplcache.vim.git'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'lervag/vim-latex'
+call dein#begin(expand('~/.vim/dein'))
 
-"plugin: goolgle calendar
-NeoBundle 'itchyny/calendar.vim'
-let g:calendar_google_task = 1
-let g:calendar_google_calendar = 1
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+"call dein#add('Shougo/neomru.vim')
+"call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('Shougo/vimproc.vim')
+call dein#add('lervag/vim-latex')
 
 "plugin: japanese ime control
-NeoBundle 'fuenor/im_control.vim'
+call dein#add('fuenor/im_control.vim')
 
 "plugin: evernote on vim
-NeoBundle 'kakkyz81/evervim'
-let g:evervim_devtoken='S=s13:U=15d509:E=1534ba7e19b:C=14bf3f6b270:P=1cd:A=en-devtoken:V=2:H=5f09f1c264a6878144902d9ea0d0f7b9'
+"call dein#add('kakkyz81/evervim')
+"let g:evervim_devtoken='S=s13:U=15d509:E=1534ba7e19b:C=14bf3f6b270:P=1cd:A=en-devtoken:V=2:H=5f09f1c264a6878144902d9ea0d0f7b9'
 
 "plugin: white space management
-NeoBundle 'bronson/vim-trailing-whitespace'
+call dein#add('bronson/vim-trailing-whitespace')
 
 "plugin: code searching ag (the_silver_searcher)
-NeoBundle 'rking/ag.vim'
+call dein#add('rking/ag.vim')
 
 "plugin: git controll
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
+call dein#add('tpope/vim-fugitive')
+call dein#add('airblade/vim-gitgutter')
 highlight clear SignColumn
 
 "plugin: python settings
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'kevinw/pyflakes-vim'
-NeoBundle 'Yggdroot/indentLine'
+call dein#add('davidhalter/jedi-vim')
+call dein#add('kevinw/pyflakes-vim')
+call dein#add('Yggdroot/indentLine')
+
+call dein#end()
 
 filetype plugin on
 filetype indent on
